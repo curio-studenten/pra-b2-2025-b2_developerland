@@ -221,7 +221,19 @@ footer{
   .row2 article {
     flex: 1;
   }
+
+  .emphasize {
+    border-left: 5px solid #27AE60; /* Dikke groene rand links */
+    box-shadow: 1px 0 5px #27AE60; /* Groene schaduw */
+    padding: 1em; /* Padding rondom de inhoud */
+  }
   
+  .emphasize h2 {
+    margin: 0; /* Verwijder standaard marges */
+    border-left: none; /* Verwijder linker rand */
+    text-align: center; /* Centreer tekst */
+  }
+
   .sidy-by-side{
     flex-direction: column;
     align-items: center;
