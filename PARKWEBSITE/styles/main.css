@@ -12,8 +12,6 @@
 body, html{
   margin: 0;
   padding: 0;
-
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background: #FCFCFC;
 }
 
@@ -156,8 +154,6 @@ button{
   height: 64px;
 }
 
-.sidy-by-side{
-}
 
 .description{
   flex: 1;
@@ -174,7 +170,7 @@ footer{
 }
 
 .hidden-on-lg{
-  display: none;
+  display:  block;
 }
 .hidden-on-sm{
   display: block;
@@ -187,9 +183,10 @@ footer{
 */
 
 @media (max-width: 480px) {
-
+  .hidden-on-sm {
+    display: none; 
+  }
 }
-
 /* 
   ##Device = Tablets, Ipads (portrait)
   ##Screen = B/w 768px to 1024px
@@ -201,64 +198,17 @@ footer{
     width: 256px;
   }
 
-  .row1 {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: stretch;
-    gap: 20px;
   }
-  .row1 article {
-    flex: 1;
-  }
-
-  .row2 {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: stretch;
-    gap: 20px;
-  }
-  .row2 article {
-    flex: 1;
-  }
-
-  .emphasize {
-    border-left: 5px solid #27AE60; /* Dikke groene rand links */
-    box-shadow: 1px 0 5px #27AE60; /* Groene schaduw */
-    padding: 1em; /* Padding rondom de inhoud */
-  }
-  
-  .emphasize h2 {
-    margin: 0; /* Verwijder standaard marges */
-    border-left: none; /* Verwijder linker rand */
-    text-align: center; /* Centreer tekst */
-  }
-
-  .row1 h2 {
-    text-shadow: 0 0 0 #FCFCFC, -1px -1px 0 #FCFCFC, 1px -1px 0 #FCFCFC, -1px 1px 0 #FCFCFC, 1px 1px 0 #FCFCFC;
-  }
-
-  .row2 h2 {
-    text-shadow: 0 0 0 #FCFCFC, -1px -1px 0 #FCFCFC, 1px -1px 0 #FCFCFC, -1px 1px 0 #FCFCFC, 1px 1px 0 #FCFCFC;
-  }
-
-  .sidy-by-side{
-    flex-direction: column;
-    align-items: center;
-  }
-}
-
 /*
   help! Het lettertype wordt om een of andere reden niet goed geladen... Misschien heeft het iets met het pad naar de fonts te maken?
 */
 @font-face {
   font-family: 'Heartbeat';
-  src:  url('fonts/heartbeat.eot') format('eot'),
-        url('fonts/heartbeat.otf') format('otf'),
-        url('fonts/heartbeat.woff') format('woff'),
-        url('fonts/heartbeat.svg') format('svg'),
-        url('fonts/heartbeat.ttf') format('ttf');
+  src:  url('../fonts/heartbeat.eot') format('eot'),
+        url('../fonts/heartbeat.otf') format('otf'),
+        url('../fonts/heartbeat.woff') format('woff'),
+        url('../fonts/heartbeat.svg') format('svg'),
+        url('../fonts/heartbeat.ttf') format('ttf');
 }
 
 /*
@@ -291,4 +241,115 @@ to   { opacity: 1; }
 @-o-keyframes fadein {
 from { opacity: 0; }
 to   { opacity: 1; }
+}
+.row h2{
+  text-shadow: 0 0 0 #FCFCFC, -1px -1px 0 #FCFCFC, 1px -1px 0 #FCFCFC, -1px 1px 0 #FCFCFC, 1px 1px 0 #FCFCFC;
+
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: stretch;
+  gap: 20px;
+}
+.row article {
+  flex: 1;
+}
+
+.side-by-side img{
+  flex: 1;
+  display: flex;
+  align-items:  space-between;
+  flex-direction: row; 
+  gap: 20px; 
+}
+
+
+@media (max-width: 768px) {
+  .side-by-side img{
+      flex-direction: column; 
+      align-items: center;
+  }
+}
+.container {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  padding: 0 20px;
+  width: 100%;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.emphasize {
+  border-left: 5px solid #27AE60;
+  box-shadow: 1px 0px 5px #27AE60;
+  padding: 1.5em;
+  background: white;
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  box-sizing: border-box;
+}
+
+.emphasize h2 {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  border-left: none;
+  margin-bottom: 20px;
+}
+
+.emphasize p {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+.emphasize button {
+  display: block;
+  width: 80%;
+  margin: 10px auto;
+  padding: 8px;
+  text-align: center;
+  background-color: #27AE60;
+  color: black;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.emphasize button:hover {
+  background-color: #218838;
+}
+.side-by-side {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+  width: 100%;
+  margin-bottom: 30px; 
+}
+
+.payment-option {
+  flex: 1 1 22%;
+  box-sizing: border-box;
+  padding: 10px;
+  text-align: center;
+  background: none;
+  border: none;
+}
+
+@media (max-width: 768px) {
+  .side-by-side {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .payment-option {
+    flex: 1 1 200%;
+  }
 }
