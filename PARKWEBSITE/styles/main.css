@@ -245,6 +245,7 @@ to   { opacity: 1; }
 from { opacity: 0; }
 to   { opacity: 1; }
 }
+
 .row h2{
   text-shadow: 0 0 0 #FCFCFC, -1px -1px 0 #FCFCFC, 1px -1px 0 #FCFCFC, -1px 1px 0 #FCFCFC, 1px 1px 0 #FCFCFC;
 
@@ -357,4 +358,18 @@ to   { opacity: 1; }
   .payment-option {
     flex: 1 1 200%;
   }
+}
+
+.product-container {
+  display: flex;
+  align-items: flex-start;
+}
+
+.product-foto {
+  max-width: 300px;
+  margin-right: 20px;
+}
+
+.product-info {
+  display: block;
 }
