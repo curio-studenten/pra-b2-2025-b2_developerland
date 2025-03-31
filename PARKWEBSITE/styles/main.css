@@ -186,6 +186,9 @@ footer{
   .hidden-on-sm {
     display: none; 
   }
+  .hidden-on-lg {
+    display: block; 
+  }
 }
 /* 
   ##Device = Tablets, Ipads (portrait)
