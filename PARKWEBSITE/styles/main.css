@@ -207,11 +207,11 @@ footer{
 */
 @font-face {
   font-family: 'Heartbeat';
-  src:  url('/PARKWEBSITE/fonts/heartbeat.eot') format('eot'),
-        url('/PARKWEBSITE/fonts/heartbeat.otf') format('otf'),
-        url('/PARKWEBSITE/fonts/heartbeat.woff') format('woff'),
-        url('/PARKWEBSITE/fonts/heartbeat.svg') format('svg'),
-        url('/PARKWEBSITE/fonts/heartbeat.ttf') format('ttf');
+  src:  url('../fonts/heartbeat.eot') format('eot'),
+        url('../fonts/heartbeat.otf') format('otf'),
+        url('../fonts/heartbeat.woff') format('woff'),
+        url('../fonts/heartbeat.svg') format('svg'),
+        url('../fonts/heartbeat.ttf') format('ttf');
 }
 
 /*
@@ -328,8 +328,10 @@ to   { opacity: 1; }
 .emphasize button:hover {
   background-color: #218838;
 }
+
 .side-by-side {
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   gap: 20px;
   flex-wrap: wrap;
